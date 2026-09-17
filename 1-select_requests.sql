@@ -64,7 +64,10 @@ SELECT DISTINCT v.marque
 FROM voiture v
 WHERE v.kilometrage < 100000;
 
--- 12. IMPOSSIBLE POUR L'INSTANT:
+-- 12. **A ESSAYER APRES AVOIR AJOUTER LES AUTRES TABLES** Voitures ayant été louées au moins une fois
+SELECT DISTINCT v.*
+FROM voiture v
+INNER JOIN location l ON l.voiture_id = v.id;
 
 --13. Dernières voiture ajoutée dans le parc
 SELECT *
